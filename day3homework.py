@@ -16,7 +16,7 @@ def login():
         print('Username or password wrong try again..')
         login()
 
-#Login()
+#login()
 
 
 
@@ -37,10 +37,11 @@ def loginWithDictionary():
 
     print("Enter password: ")
     passwordInput = input()
-    
-    if userDictionary[usernameInput] == passwordInput:
-        print('Login succesful')
-    else:
+
+    try:
+        if userDictionary[usernameInput] == passwordInput:
+            print('Login succesful')
+    except:
         print('Username or password wrong try again...')
         loginWithDictionary()
 
